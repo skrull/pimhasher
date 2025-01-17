@@ -1,0 +1,41 @@
+pimhasher v10
+
+(C) Rodrigo Vigna
+https://github.com/skrull/pimhasher
+
+  pimhasher is a program inspired by VeraCrypt's PIM (Personal Iterations
+  Multiplier) feature, designed to provide the same functionality for LUKS
+  (Linux Unified Key Setup).
+
+
+Installation and Setup
+
+  To use pimhasher, follow these steps:
+
+    1. Compile and install
+       Build the project and install it on your system.
+
+    2. Configure /etc/crypttab
+       Add the keyscript option to the desired volume in your crypttab
+       configuration file.
+
+
+Example Configuration
+
+  An example entry for the crypttab file:
+
+example-volume UUID="" none luks,keyscript=pimhasher
+
+  Replace example-volume and UUID with the appropriate identifiers for
+  your setup.
+
+
+Speed
+  Computing 1,000,000 rounds takes approximately 2.5 seconds on an Intel
+  i7-2600 CPU, with no support for multithreading.
+
+
+References
+
+  VeraCrypt: https://veracrypt.fr
+  VeraCrypt PIM Feature: https://www.veracrypt.fr/en/Personal%20Iterations%20Multiplier%20(PIM).html

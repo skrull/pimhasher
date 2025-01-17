@@ -1,0 +1,43 @@
+Version 10 - 2024-01-17
+    Added benchmarking.
+    The BLAKE3 digest size must be between 32 and 256, where 256 produces a 512-byte output, the maximum password size supported by cryptsetup.
+
+Version 9 - 2024-01-17
+    Minor fixes.
+
+Version 8 - 2024-01-17
+
+    Added Makefile for streamlined builds.
+    Performed miscellaneous cleanup tasks.
+
+Version 7 - 2024-01-15
+
+    Set minimum digest size to 64 and maximum digest size to 512.
+    (Note: The maximum is currently constrained by the cryptsetup maximum password size)
+
+Version 6 - 2024-01-14
+
+    Prevented newline (\n) characters from being sent with passwords.
+
+Version 5 - 2024-01-11
+
+    Integrated cryptdisks functions.
+    Added Plymouth integration.
+
+Version 4 - 2024-01-10
+
+    Removed b3sum due to impracticality with high PIM numbers.
+    Developed the initial hasher implementation in C.
+
+Version 3 - 2024-01-09
+
+    Applied minor fixes and improvements.
+
+Version 2 - 2024-01-08
+
+    Deprecated Python version due to incompatibility with root volumes.
+    Developed the initial implementation in Dash using b3sum.
+
+Version 1 - 2024-01-06
+
+    Created the initial implementation in Python.
